@@ -1,6 +1,6 @@
 {
   "layer": "top",
-    "modules-left": ["custom/arch", "hyprland/workspaces"],
+    "modules-left": ["custom/arch", "hyprland/workspaces", "tray"],
     "modules-center": ["clock"],
     "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery"],
     "custom/arch": {
@@ -44,7 +44,7 @@
       "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
     },
     "network": {
-      "interface": "wlo1",
+      "interface": "wlan0",
       "format": "{ifname}",
       "format-wifi": "<span color='#b4befe'> </span>{essid}",
       "format-ethernet": "{ipaddr}/{cidr} ",
@@ -57,4 +57,8 @@
       "format-charging": "<span color='#b4befe'></span> {capacity}%",
       "tooltip": false,
     },
+    "tray": {
+      "icon-size": 21,
+      "spacing": 10
+    }
 }

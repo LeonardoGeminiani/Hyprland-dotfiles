@@ -2,20 +2,18 @@ monitor=,preferred,auto,1
 # monitor=eDP-1,disable
 
 exec-once = waybar 
-exec-once = wpaperd
-exec-once = $HOME/.local/bin/startup.sh
-# exec-once = hyprpaper 
+exec-once = hyprpaper 
 # exec-once = fcitx5
-# exec = hyprpaper
 
 input {
     kb_layout = it,us
+
     follow_mouse = 1
 
     touchpad {
         natural_scroll = yes
     }
-    # kb_options = caps:escape
+    kb_options = caps:escape
 }
 
 general {
@@ -52,16 +50,14 @@ gestures {
 }
 
 windowrule = float, Rofi
-windowrule = center, title:(MEGAsync)
 windowrule = noborder, Rofi
 windowrule = float, title:^(sfml)$
 windowrule = center, title:^(sfml)$
 
-
 $mainMod = SUPER
 
 # keybind for Master layout
-bind = $mainMod, E, layoutmsg, orientationnext
+bind = $mainMod, SPACE, layoutmsg, orientationnext
 bind = $mainMod, comma, layoutmsg, addmaster
 bind = $mainMod, period, layoutmsg, removemaster
 bind = $mainMod, RETURN, layoutmsg, swapwithmaster
@@ -76,19 +72,15 @@ bind = $mainMod, F, fullscreen
 bind = $mainMod, W, exec, pkill -SIGUSR1 '^waybar$'
 
 # volume control
-bind = , xf86audioraisevolume, exec, amixer sset Master 5%+;
-bind = , xf86audiolowervolume, exec, amixer sset Master 5%-;
-bind = , xf86audiomute, exec, sh $HOME/.local/bin/mute.sh;
-
-# switch layouts
-bind = $mainMod, SPACE, exec, hyprctl switchxkblayout at-translated-set-2-keyboard next
+bind = , xf86audioraisevolume, exec, amixer sset Master 1%+;
+bind = , xf86audiolowervolume, exec, amixer sset Master 1%-;
 
 # brightneww control
 bind = , xf86monbrightnessup, exec, brightnessctl set 5%+
 bind = , xf86monbrightnessdown, exec, brightnessctl set 5%-
 
 # screenshot
-# bind = , print, exec, grim ~/Pictures/$(date '+%Y-%m-%d-%H:%M:%S').png
+bind = , print, exec, grim ~/Pictures/$(date '+%Y-%m-%d-%H:%M:%S').png
 bind = $mainMod, S, exec, grim ~/Pictures/$(date '+%Y-%m-%d-%H:%M:%S').png
 
 bind = $mainMod, h, movefocus, l

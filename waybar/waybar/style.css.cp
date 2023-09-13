@@ -2,21 +2,20 @@
   border: none;
   font-family: 'Fira Code', 'Symbols Nerd Font Mono';
   font-size: 16px;
-  font-feature-settings: '"zero", "ss15px01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
   min-height: 45px;
 }
 
 window#waybar {
   background: transparent;
-  /* background: red; */
 }
 
-#custom-arch, #workspaces, #tray {
+#custom-arch, #workspaces {
   border-radius: 10px;
   background-color: #11111b;
   color: #b4befe;
-  margin-top: 8px; /*margin*/
-	margin-right: 8px; /*margin*/
+  margin-top: 15px;
+	margin-right: 15px;
   padding-top: 1px;
   padding-left: 10px;
   padding-right: 10px;
@@ -24,7 +23,7 @@ window#waybar {
 
 #custom-arch {
   font-size: 20px;
-	margin-left: 8px; /*margin*/
+	margin-left: 15px;
   color: #b4befe;
 }
 
@@ -33,14 +32,14 @@ window#waybar {
   color: #b4befe;
 }
 
-#clock, #backlight, #pulseaudio, #bluetooth, #network, #battery, #tray{
+#clock, #backlight, #pulseaudio, #bluetooth, #network, #battery{
   border-radius: 10px;
   background-color: #11111b;
   color: #cdd6f4;
-  margin-top: 8px; /*margin*/
+  margin-top: 15px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-right: 8px; /*margin*/
+  margin-right: 15px;
 }
 
 #backlight, #bluetooth {
