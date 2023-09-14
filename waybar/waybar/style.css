@@ -67,6 +67,9 @@ window#waybar {
   margin-right: 0;
 }
 
+#clock * {
+}
+
 #battery.warning {
   color: rgb(227, 227, 34);
   font-weight: bolder;
