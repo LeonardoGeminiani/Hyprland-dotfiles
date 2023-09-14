@@ -20,7 +20,7 @@
     },
     "clock": {
       "format": "<span color='#b4befe'> </span>{:%H:%M}",
-      "format-alt": "{:%Y-%m-%d}  ",
+      "format-alt": "{:%d-%m-%Y}  ",
       "tooltip-format": "<tt><big>{calendar}</big></tt>",
       "calendar": {
                   "mode"          : "month",
