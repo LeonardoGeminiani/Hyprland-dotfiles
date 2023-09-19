@@ -1,3 +1,3 @@
 source .zshrc
 
-starthypr
+# starthypr

@@ -24,7 +24,7 @@
       "tooltip-format": "<tt><big>{calendar}</big></tt>",
       "calendar": {
                   "mode"          : "month",
-                  "mode-mon-col"  : 3,
+                  "mode-mon-col"  : 2,
                   "weeks-pos"     : "right",
                   "on-scroll"     : 1,
                   "on-click-right": "mode",
