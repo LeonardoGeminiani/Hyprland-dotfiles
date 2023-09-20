@@ -65,6 +65,10 @@ window#waybar {
 
 #clock {
   margin-right: 0;
+  background-color: transparent;
+  font-size: x-large;
+  font-weight: bolder;
+  color: #b4befe;
 }
 
 tooltip {
