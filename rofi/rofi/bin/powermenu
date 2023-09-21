@@ -9,7 +9,7 @@ if [[ "$DIR" == "powermenus" ]]; then
 	reboot=""
 	lock=""
 	suspend=""
-	# logout=""
+	logout=""
 	ddir="$HOME/.config/rofi/config"
 else
 
@@ -22,14 +22,14 @@ else
 		reboot="ﰇ"
 		lock=""
 		suspend="鈴"
-		# logout=""
+		logout=""
 
 	else
 		shutdown="襤Shutdown"
 		reboot="ﰇ Restart"
 		lock=" Lock"
 		suspend="鈴Sleep"
-		# logout=" Logout"
+		logout=" Logout"
 	fi
 	ddir="$HOME/.config/rofi/config"
 fi
@@ -49,8 +49,8 @@ show_msg() {
 }
 
 # Variable passed to rofi
-# options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
-options="$lock\n$suspend\n$reboot\n$shutdown"
+options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
+# options="$lock\n$suspend\n$reboot\n$shutdown"
 
 chosen="$(echo -e "$options" | $rofi_command -p "UP - $uptime" -dmenu -selected-row 0)"
 case $chosen in
@@ -90,14 +90,14 @@ case $chosen in
 			show_msg
         fi
         ;;
-    # $logout)
-	# 	ans=$(rdialog &)
-	# 	if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-	  		
-	# 	elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
-	# 		exit
-    #     else
-	# 		show_msg
-    #     fi
-    #     ;;
+    $logout)
+		ans=$(rdialog &)
+		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
+	  		pkill -u $(whoami)	# to not killing Process like NetworkManager (started by root), killing those process can couse crash at login
+		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
+			exit
+        else
+			show_msg
+        fi
+        ;;
 esac
