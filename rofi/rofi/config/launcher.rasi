@@ -37,7 +37,7 @@ textbox-prompt-colon {
   border-radius:                  100%;
   background-color:               @SEL;
   text-color:                     @FG;
-  padding:                        8px 12px 8px 12px;
+  padding:                        11px 12px 0px 8px;
   font:			                "Fira Code Nerd Font 10";
 }
 
