@@ -1,12 +1,12 @@
 * {
   border: none;
   font-family: 'Fira Code', 'Symbols Nerd Font Mono';
-  font-size: 16px;
   font-feature-settings: '"zero", "ss15px01", "ss02", "ss03", "ss04", "ss05", "cv31"';
   min-height: 25px;
 }
 
 window#waybar {
+  font-size: 16px;
   background: transparent;
   /* background: red; */
 }
@@ -31,6 +31,18 @@ window#waybar {
 #workspaces button {
   background: #11111b;
   color: #b4befe;
+  border-radius: 50%;
+  padding: 0;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin: 7px;
+  font-size: 20px;
+}
+
+#workspaces button.active {
+  background: #303446;
+  color: #b4befe;
+  font-weight: bolder;
 }
 
 #clock, #backlight, #pulseaudio, #bluetooth, #network, #battery, #tray, #custom-layout{
