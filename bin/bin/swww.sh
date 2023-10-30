@@ -1,5 +1,5 @@
 img=1;
-max_img=4;
+max_img=3;
 
 swww init
 
