@@ -74,8 +74,9 @@
       "format": "<span color='#b4befe'>{icon}</span> {capacity}%",
       "format-icons": ["", "", "", "", "", "", "", "", "", ""],
       "format-charging": "<span color='#b4befe'></span> {capacity}%",
+      "format-time": "{H} h {M} min",
       "interval": 5,
-      "tooltip": false,
+      "tooltip-format": "{time}",
       "states": {
         "warning": 30,
         "critical": 15
