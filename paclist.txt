@@ -27,7 +27,6 @@ file-roller
 filezilla
 firefox
 flatpak
-fprintd
 gifsicle
 gimp
 git
@@ -44,11 +43,8 @@ hyfetch
 hyprland
 i2c-tools
 inetutils
-intel-ucode
-intellij-idea-community-edition
 iwd
 iwgtk
-jetbrains-toolbox
 jq
 kitty
 lazygit
@@ -77,7 +73,6 @@ nodejs
 noto-fonts-emoji
 npm
 nuget
-nvidia-utils
 nvtop
 nwg-look
 obs-studio
@@ -134,12 +129,8 @@ wireshark-cli
 wireshark-qt
 wl-color-picker
 wlr-randr
-wordpress
-xampp
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr
 yay
-zathura
-zathura-pdf-poppler
 zip
 zsh
