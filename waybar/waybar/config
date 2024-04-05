@@ -1,103 +1,149 @@
 {
   "layer": "top",
-    "modules-left": ["custom/arch", "temperature", "disk", "hyprland/workspaces", "tray"],
-    "modules-center": ["clock"],
-    "modules-right": ["custom/layout", "backlight", "pulseaudio", "bluetooth", "network" , "battery"],
-    "custom/arch": {
-      "format": "  ",
-      "tooltip": false,
-      "on-click": "sh $HOME/.config/rofi/bin/powermenu"
-    },
-    "hyprland/workspaces": {
-      "format": "{name}",
-      "tooltip": false,
-      "all-outputs": true
-    },
-    "clock": {
-      "format": "{:%H:%M}",
-      "format-alt": "{:%d-%m-%Y}  ",
-      "tooltip-format": "<tt><big>{calendar}</big></tt>",
-      "calendar": {
-        "mode"          : "month",
-        "mode-mon-col"  : 2,
-        "weeks-pos"     : "right",
-        "on-scroll"     : 1,
-        "on-click-right": "mode",
-        "format": {
-            "months":     "<span color='#ffead3'><b>{}</b></span>",
-            "days":       "<span color='#b4befe'><b>{}</b></span>",
-            "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-            "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-            "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-          }
-        },
-      "actions":  {
-        "on-click-right": "mode",
-        "on-click-forward": "tz_up",
-        "on-click-backward": "tz_down",
-        "on-scroll-up": "shift_up",
-        "on-scroll-down": "shift_down"
+  "position": "bottom",
+  "modules-left": [
+    "custom/arch",
+    "temperature",
+    "disk",
+    "hyprland/workspaces",
+    "tray"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "custom/layout",
+    "backlight",
+    "pulseaudio",
+    "bluetooth",
+    "network",
+    "battery"
+  ],
+  "custom/arch": {
+    "format": "  ",
+    "tooltip": false,
+    "on-click": "sh $HOME/.config/rofi/bin/powermenu"
+  },
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "tooltip": false,
+    "all-outputs": true
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%d-%m-%Y}  ",
+    "tooltip-format": "<tt><big>{calendar}</big></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 2,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#b4befe'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
       }
     },
-    "backlight": {
-      "device": "intel_backlight",
-      "format": "<span color='#b4befe'>{icon}</span> {percent}%",
-      "format-icons": ["", "", "", "", "", "", "", "", ""],
-      "tooltip-format": "brightness"
-    },
-    "pulseaudio": {
-      "format": "<span color='#b4befe'>{icon}</span> {volume}%",
-      "format-muted": "",
-      "tooltip-format": "volume",
-      "format-icons": {
-        "headphone": "",
-        "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
-      },
-      "scroll-step": 1,
-    },
-    "bluetooth": {
-      "format": "<span color='#b4befe'></span> {status}",
-      "format-disabled": "", // an empty format will hide the module
-      "format-connected": "<span color='#b4befe'></span> {num_connections}",
-      "tooltip-format": "{device_enumerate}",
-      "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
-    },
-    "network": {
-      "interface": "wlan0",
-      "format": "{ifname}",
-      "format-wifi": "<span color='#b4befe'> </span>{essid}",
-      "format-ethernet": "{ipaddr}/{cidr} ",
-      "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
-      "tooltip": false,
-    },
-    "battery": {
-      "format": "<span color='#b4befe'>{icon}</span> {capacity}%",
-      "format-icons": ["", "", "", "", "", "", "", "", "", ""],
-      "format-charging": "<span color='#b4befe'></span> {capacity}%",
-      "format-time": "{H} h {M} min",
-      "interval": 5,
-      "tooltip-format": "{time}",
-      "states": {
-        "warning": 30,
-        "critical": 15
-      },
-    },
-    "tray": {
-      "icon-size": 21,
-      "spacing": 10
-    },
-    "custom/layout": {
-      "exec": "~/.local/bin/waybar_layout.sh",
-      "restart-interval": 1,
-      "tooltip": false
-    },
-    "temperature": {
-      "format": "CPU: {temperatureC}°C",
-      "tooltip-format": "socket temperature"
-    },
-    "disk": {
-      "interval": 30,
-      "format": "◔ {percentage_used}%",
-      "path": "/"
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
     }
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "<span color='#b4befe'>{icon}</span> {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "tooltip-format": "brightness"
+  },
+  "pulseaudio": {
+    "format": "<span color='#b4befe'>{icon}</span> {volume}%",
+    "format-muted": "",
+    "tooltip-format": "volume",
+    "format-icons": {
+      "headphone": "",
+      "default": [
+        "",
+        "",
+        "󰕾",
+        "󰕾",
+        "󰕾",
+        "",
+        "",
+        ""
+      ]
+    },
+    "scroll-step": 1,
+  },
+  "bluetooth": {
+    "format": "<span color='#b4befe'></span> {status}",
+    "format-disabled": "", // an empty format will hide the module
+    "format-connected": "<span color='#b4befe'></span> {num_connections}",
+    "tooltip-format": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
+  },
+  "network": {
+    "interface": "wlan0",
+    "format": "{ifname}",
+    "format-wifi": "<span color='#b4befe'> </span>{essid}",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
+    "tooltip": false,
+  },
+  "battery": {
+    "format": "<span color='#b4befe'>{icon}</span> {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "format-charging": "<span color='#b4befe'></span> {capacity}%",
+    "format-time": "{H} h {M} min",
+    "interval": 5,
+    "tooltip-format": "{time}",
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+  "custom/layout": {
+    "exec": "~/.local/bin/waybar_layout.sh",
+    "restart-interval": 1,
+    "tooltip": false
+  },
+  "temperature": {
+    "format": "CPU: {temperatureC}°C",
+    "tooltip-format": "socket temperature"
+  },
+  "disk": {
+    "interval": 30,
+    "format": "◔ {percentage_used}%",
+    "path": "/"
+  }
 }
