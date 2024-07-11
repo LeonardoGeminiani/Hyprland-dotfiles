@@ -1,3 +1,3 @@
-sleep 1 # to ensure waybar is running
+sleep 2 # to ensure waybar is running
 
 megasync & disown
