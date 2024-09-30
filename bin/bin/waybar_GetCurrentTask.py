@@ -38,20 +38,52 @@ def convert_md_to_html(markdown_text):
 
     return markdown_text
 
-with open(f"{os.getenv('HOME')}/.local/bin/tasks.md", 'r') as file:
-    content = file.read()
+def generate_error(error):
+    return f"<b>error: </b><span color='red'>{error}</span>"
+
+def print_data(text :str, tooltip :str):
+    data = {
+        "text" : text,
+        "tooltip" : tooltip
+    }
+    print(json.dumps(data))
+
+try:
+    dir = f"{os.getenv('HOME')}/tasks"
+    files = os.listdir(dir)
+
+    if ".config" not in files:
+        os.makedirs(f"{dir}/.config", exist_ok=True)
+
+    with open(f"{dir}/.config/settings.json", "r+") as file:
+        try:
+            settings = json.load(file)
+        except:
+            #default settings
+            settings = {
+                "currentFile": ""
+            }
+            json.dump(settings, file, indent=4)
+except:
+    print_data(generate_error(f"{dir} does not exist"), "")
+    exit()
+
+
+currentFile = settings["currentFile"]
+
+try:
+    with open(f"{dir}/{currentFile}.md", 'r') as file:
+        content = file.read()
+except:
+    print_data(generate_error(f"not valid currentFile Selected"), "")
+    exit()
+    
 
 try:
     tasks = content.split("-", 1)[1].split("-")
-    tooltip = convert_md_to_html(content)
-    text = convert_md_to_html(find_first_unchecked(tasks))
+    print_data(
+        convert_md_to_html(find_first_unchecked(tasks)),
+        convert_md_to_html(content)
+    )
 except:
-    tooltip = "no tasks <b>(file empty)</b>"
-    text = "<i>task</i>"
-
-data = {
-    "text" : text,
-    "tooltip" : tooltip
-}
-
-print(json.dumps(data))
+    print_data(generate_error("no tasks <b>(file empty)</b>"), "")
