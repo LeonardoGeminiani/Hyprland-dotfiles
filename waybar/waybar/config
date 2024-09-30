@@ -6,7 +6,8 @@
     "temperature",
     "disk",
     "hyprland/workspaces",
-    "tray"
+    "tray",
+    "custom/tasks"
   ],
   "modules-center": [
     "clock"
@@ -19,6 +20,12 @@
     "network",
     "battery"
   ],
+  "custom/tasks" : {
+    "format": "{}",
+    "return-type": "json",
+    "exec":  "~/.local/bin/waybar_GetCurrentTask.py",
+    "restart-interval": 2
+  },
   "custom/arch": {
     "format": "  ",
     "tooltip": false,

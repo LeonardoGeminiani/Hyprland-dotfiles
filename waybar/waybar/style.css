@@ -11,7 +11,7 @@ window#waybar {
   /* background: red; */
 }
 
-#custom-arch, #workspaces, #tray, #temperature, #disk{
+#custom-arch, #workspaces, #tray, #temperature, #disk, #custom-tasks{
   border-radius: 10px;
   background-color: #11111b;
   color: #b4befe;
