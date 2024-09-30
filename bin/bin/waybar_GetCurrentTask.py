@@ -81,9 +81,11 @@ except:
 
 try:
     tasks = content.split("-", 1)[1].split("-")
+
+    # good print
     print_data(
         convert_md_to_html(find_first_unchecked(tasks)),
-        convert_md_to_html(content)
+        f"<span size='large' color='yellow'><b>{currentFile}</b></span>\n" + convert_md_to_html(content)
     )
 except:
     print_data(generate_error("no tasks <b>(file empty)</b>"), "")
