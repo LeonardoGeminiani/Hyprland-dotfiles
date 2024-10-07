@@ -48,6 +48,9 @@ def print_data(text :str, tooltip :str):
     }
     print(json.dumps(data))
 
+# def get_metadata(file: str):
+    
+
 try:
     dir = f"{os.getenv('HOME')}/tasks"
     files = os.listdir(dir)
@@ -82,6 +85,7 @@ except:
 try:
     tasks = content.split("-", 1)[1].split("-")
 
+    
     # good print
     print_data(
         convert_md_to_html(find_first_unchecked(tasks)),
