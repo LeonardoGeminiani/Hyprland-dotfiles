@@ -23,7 +23,7 @@
   "custom/tasks" : {
     "format": "{}",
     "return-type": "json",
-    "exec":  "~/.local/bin/waybar_GetCurrentTask.py",
+    "exec":  "~/.config/tasks_waybar/waybar_GetCurrentTask.py",
     "restart-interval": 2
   },
   "custom/arch": {
