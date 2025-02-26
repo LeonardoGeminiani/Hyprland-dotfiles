@@ -7,6 +7,8 @@ stow -t ~/.config -S waybar
 stow -t ~/.config -S hypr
 stow -t ~/.config -S rofi
 stow -t ~/.config -S kitty
+
+stow -t ~/.config -S foot
 # stow -t ~/.config -S nvim
 # stow -t ~/.config -S neofetch
 # stow -t ~/.config -S zathura
